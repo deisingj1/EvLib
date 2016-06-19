@@ -1,17 +1,15 @@
 #include "EvLib.h"
+#include <string>
+#include <iostream>
 
 using namespace std;
 
 namespace EvLib {
-	Game::Game(string ht, string at) {
-		homeTeam = ht;
-		awayTeam = at;
-		cout << "Created game" << endl;
+
+	Team::Team(string tName) {
+		name = tName;
 	}
-	string Game::getHomeTeam(void) {
-		return homeTeam;
+	string Team::getName(void) {
+		return name;
 	}
-	string Game::getAwayTeam(void) {
-		return awayTeam;
-	} 
 }

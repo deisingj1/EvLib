@@ -1,20 +1,18 @@
 #pragma once
-#include <string>
-#include <iostream>
+
+#include "Game.h"
 
 using namespace std;
 
 namespace EvLib {
-	class Game {
+
+	class Team {
 
 	public:
-		string getHomeTeam(void);
-		string getAwayTeam(void);
-		Game(string ht, string at);
+		string getName(void);
+		Team(string name);
 
 	private:
-		string homeTeam;
-		string awayTeam;
-
+		string name;
 	};
 }
