@@ -1,19 +1,35 @@
 #pragma once
 #include <string>
-
-using namespace std;
+#include <map>
 
 namespace EvLib {
 	class Game {
 
 	public:
-		static const int VISTEAM = 1;
-		static const int HOMETEAM = 2;
-		Game(string gid);
-		string getAttrib(int attrib);
+		enum class Info {
+			visteam, hometeam, site,
+			date, number, starttime,
+			daynight, usedh, umphome,
+			ump1b, ump2b, ump3b,
+			howscored, pitches, temp,
+			winddir, windspeed, fieldcond,
+			precip, sky, timeofgame,
+			attendance, wp, lp,
+			save
+		};
+		Game(std::string gid);
+		std::string getInfo(Info info);
+		void setInfo(std::map< Info, std::string > info);
 
 	private:
-		string id;
-
+		std::string id, visteam, hometeam, site,
+			date, number, starttime,
+			daynight, usedh, umphome,
+			ump1b, ump2b, ump3b,
+			howscored, pitches, temp,
+			winddir, windspeed, fieldcond,
+			precip, sky, timeofgame,
+			attendance, wp, lp,
+			save;
 	};
 }

@@ -2,25 +2,70 @@
 #include "Game.h"
 #include <string>
 #include <iostream>
-
-using namespace std;
+#include <map>
 
 namespace EvLib {
-	Game::Game(string gid) {
+	Game::Game(std::string gid) {
 		id = gid;
 	}
-	string Game::getAttrib(int attrib) {
-		string value;
-		switch (attrib) {
-		case VISTEAM:
-			cout << "Visiting team" << endl;
-			break;
-		case HOMETEAM:
-			cout << "Home team" << endl;
-			break;
+	void Game::setInfo(std::map< Info, std::string > info) {
+
+	}
+	std::string Game::getInfo(Info info) {
+		switch (info) {
+		case Info::visteam:
+			return visteam;
+		case Info::hometeam:
+			return hometeam;
+		case Info::site:
+			return site;
+		case Info::date:
+			return date;
+		case Info::number:
+			return number;
+		case Info::starttime:
+			return starttime;
+		case Info::daynight:
+			return daynight;
+		case Info::usedh:
+			return usedh;
+		case Info::umphome:
+			return umphome;
+		case Info::ump1b:
+			return ump1b;
+		case Info::ump2b:
+			return ump2b;
+		case Info::ump3b:
+			return ump3b;
+		case Info::howscored:
+			return howscored;
+		case Info::pitches:
+			return pitches;
+		case Info::temp:
+			return temp;
+		case Info::winddir:
+			return winddir;
+		case Info::windspeed:
+			return windspeed;
+		case Info::fieldcond:
+			return fieldcond;
+		case Info::precip:
+			return precip;
+		case Info::sky:
+			return sky;
+		case Info::timeofgame:
+			return timeofgame;
+		case Info::attendance:
+			return attendance;
+		case Info::wp:
+			return wp;
+		case Info::lp:
+			return lp;
+		case Info::save:
+			return save;
+
 		default:
-			break;
+			return NULL;
 		}
-		return value;
 	}
 }
