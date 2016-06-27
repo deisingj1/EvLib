@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Game.h"
+#include "Player.h"
 
 using namespace std;
 

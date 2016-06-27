@@ -18,6 +18,7 @@ namespace EvLib {
 			save
 		};
 		Game(std::string gid);
+		Game(std::string gid, std::map < Info, std::string> gInfo);
 		std::string getInfo(Info info);
 		std::map<Info, std::string> getInfo(void);
 		void setInfo(std::map< Info, std::string > info);

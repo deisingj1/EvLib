@@ -7,7 +7,10 @@
 namespace EvLib {
 	Game::Game(std::string gid) {
 		id = gid;
-		std::map<Info, std::string> info;
+	}
+	Game::Game(std::string gid, std::map<Info, std::string> gInfo) {
+		id = gid;
+		info = std::map<Info, std::string>(gInfo);
 	}
 	void Game::setInfo(std::map< Info, std::string > ninfo) {
 		info = std::map<Info, std::string>(ninfo);
